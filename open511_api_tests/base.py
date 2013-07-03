@@ -12,7 +12,6 @@ EVENTS_URL = None
 
 NSMAP = {
     'gml': 'http://www.opengis.net/gml',
-    'atom': 'http://www.w3.org/2005/Atom'
 }
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -42,7 +41,7 @@ def _get_events_url(api_url):
     discovery = etree.fromstring(resp.content)
     assert discovery.tag == 'open511'
     event_service = discovery.xpath('services/service[service_type/text()="EVENTS"]')[0]
-    event_url = event_service.xpath('atom:link[@rel="self"]', namespaces=NSMAP)[0].get('href')
+    event_url = event_service.xpath('link[@rel="self"]', namespaces=NSMAP)[0].get('href')
     return urljoin(api_url, event_url)
 
 def _api_endpoint_command(command, **kwargs):
