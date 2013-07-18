@@ -29,8 +29,9 @@ class SimpleFiltersCase(BaseCase):
 
 
 DOC = """
-<open511 xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gml="http://www.opengis.net/gml" xml:base="http://repentigny.open511.ca" version="v0">
-  <event xml:lang="fr" id="29">
+<open511 xmlns:gml="http://www.opengis.net/gml" xml:base="http://repentigny.open511.ca" version="v0">
+  <event xml:lang="fr">
+    <id>test.open511.org/1</id>
     <status>ARCHIVED</status>
     <description>Fermeture compl&#232;te</description>
     <schedule>
@@ -54,7 +55,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="25">
+  <event xml:lang="fr">
+    <id>test.open511.org/2</id>
     <status>ARCHIVED</status>
     <description>Bris d'aqueduc</description>
     <schedule>
@@ -72,7 +74,8 @@ DOC = """
     <created>2013-05-24T13:14:21.688587+00:00</created>
     <updated>2013-05-24T14:58:00.671428+00:00</updated>
   </event>
-  <event xml:lang="fr" id="31">
+  <event xml:lang="fr">
+    <id>test.open511.org/3</id>
     <status>ARCHIVED</status>
     <description>Fermeture compl&#232;te</description>
     <schedule>
@@ -94,7 +97,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="27">
+  <event xml:lang="fr">
+    <id>test.open511.org/4</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#233;te de la rue</description>
     <schedule>
@@ -118,7 +122,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="26">
+  <event xml:lang="fr">
+    <id>test.open511.org/5</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#233;te de la rue Lucerne</description>
     <schedule>
@@ -134,7 +139,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="28">
+  <event xml:lang="fr">
+    <id>test.open511.org/6</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#233;te</description>
     <schedule>
@@ -157,7 +163,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="30">
+  <event xml:lang="fr">
+    <id>test.open511.org/7</id>  
     <status>ACTIVE</status>
     <description>Fermeture compl&#232;te en direction Nord</description>
     <schedule>
@@ -181,7 +188,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="24">
+  <event xml:lang="fr">
+    <id>test.open511.org/8</id>  
     <status>ARCHIVED</status>
     <description>Entrave avec circulation en alternance sur le Boul. Pierre-Le Gardeur pr&#232;s de Place Aubert</description>
     <schedule>
@@ -204,7 +212,8 @@ DOC = """
       </road>
     </roads>
   </event>
-  <event xml:lang="fr" id="33">
+  <event xml:lang="fr">
+    <id>test.open511.org/9</id>  
     <status>ARCHIVED</status>
     <description>Fermeture partiel de la rue Notre Dame:
 - Fermeture de deux voies sur la rue Notre-Dame en face du num&#233;ro civique 915
@@ -228,7 +237,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="32">
+  <event xml:lang="fr">
+    <id>test.open511.org/10</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#232;te de la rue Notre-Dame &#224; l'intersection des rues Gravel et Beauchesne. 
  - &#192; l&#8217;est de la rue Gravel, maintien de la circulation locale sur la rue Notre-Dame jusqu&#8217;&#224; la rue du Vieux Moulin et le 915 Notre-Dame. 
@@ -254,7 +264,8 @@ DOC = """
     </geography>
     <detour>Via la rue Beauchesne, le boulevard Iberville et la rue Gravel</detour>
   </event>
-  <event xml:lang="fr" id="34">
+  <event xml:lang="fr">
+    <id>test.open511.org/11</id>  
     <status>ARCHIVED</status>
     <description>Fermeture partiel de la voie de circulation. Maintien d'un voie dans chaque direction.</description>
     <schedule>
@@ -277,7 +288,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="36">
+  <event xml:lang="fr">
+    <id>test.open511.org/12</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#232;te de la rue Ritchot</description>
     <schedule>
@@ -301,7 +313,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="35">
+  <event xml:lang="fr">
+    <id>test.open511.org/13</id>  
     <status>ARCHIVED</status>
     <description>Fermeture compl&#232;te de la voie de circulation.</description>
     <schedule>
@@ -325,7 +338,8 @@ DOC = """
       </gml:Point>
     </geography>
   </event>
-  <event xml:lang="fr" id="37">
+  <event xml:lang="fr">
+    <id>test.open511.org/14</id>  
     <status>ACTIVE</status>
     <description>Fermeture compl&#232;te du chemin de la Presqu'Ile</description>
     <schedule>
@@ -349,7 +363,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="38">
+  <event xml:lang="fr">
+    <id>test.open511.org/15</id>  
     <status>ACTIVE</status>
     <description>Fermeture compl&#232;te de voie de circulation en direction Nord</description>
     <schedule>
@@ -372,7 +387,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="40">
+  <event xml:lang="fr">
+    <id>test.open511.org/16</id>  
     <status>ACTIVE</status>
     <description>Fermeture compl&#232;te de la voie de circulation.</description>
     <schedule>
@@ -396,7 +412,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="42">
+  <event xml:lang="fr">
+     <id>test.open511.org/17</id> 
     <status>ACTIVE</status>
     <description>Fermeture compl&#232;te de la voie de circulation</description>
     <schedule>
@@ -420,7 +437,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="39">
+  <event xml:lang="fr">
+    <id>test.open511.org/18</id>  
     <status>ARCHIVED</status>
     <description>Fermeture partielle de la voie de circulation. Circulation en alternance avec signaleur. </description>
     <schedule>
@@ -443,7 +461,8 @@ DOC = """
       </gml:LineString>
     </geography>
   </event>
-  <event xml:lang="fr" id="41">
+  <event xml:lang="fr">
+    <id>test.open511.org/19</id>  
     <status>ACTIVE</status>
     <description>Fermeture partiel de la voie de circulation.</description>
     <schedule>

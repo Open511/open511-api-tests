@@ -10,13 +10,15 @@ TEST_ENDPOINT_URL = None
 USE_DJANGO_TEST_CLIENT = False
 EVENTS_URL = None
 
+DjangoTestClient = None
+
 NSMAP = {
     'gml': 'http://www.opengis.net/gml',
 }
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 RELAXNG_SCHEMA = etree.RelaxNG(etree.parse(os.path.join(CURRENT_DIR, 'open511.rng')))
-SCHEMATRON_DOC = isoschematron.Schematron(etree.parse(os.path.join(CURRENT_DIR, 'open511.sch')))
+SCHEMATRON_DOC = isoschematron.Schematron(etree.parse(os.path.join(CURRENT_DIR, 'open511.schematron')))
 
 def set_options(api_url, test_endpoint_url, use_django_test_client=False):
     global API_URL, TEST_ENDPOINT_URL, EVENTS_URL, USE_DJANGO_TEST_CLIENT, DjangoTestClient, _api_endpoint_command
@@ -48,7 +50,7 @@ def _api_endpoint_command(command, **kwargs):
     data = dict(command=command)
     data.update(kwargs)
     post = DjangoTestClient().post if USE_DJANGO_TEST_CLIENT else requests.post
-    assert requests.post(TEST_ENDPOINT_URL, data=data).status_code == 200
+    assert post(TEST_ENDPOINT_URL, data=data).status_code == 200
 
 class BaseCase(TestCase):
 
