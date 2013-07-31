@@ -39,7 +39,7 @@ DOC = """
       <end_date>2013-05-09</end_date>
     </schedule>
     <headline>Excavation d'&#233;gouts</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <detour>Partage des deux voies de circulation en direction Ouest</detour>
     <roads>
       <road>
@@ -64,7 +64,7 @@ DOC = """
       <end_date>2013-05-19</end_date>
     </schedule>
     <headline>Bris d'aqueduc</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <event_type>INCIDENT</event_type>
     <geography>
       <gml:Point srsName="EPSG:4326">
@@ -83,7 +83,7 @@ DOC = """
       <end_date>2013-05-02</end_date>
     </schedule>
     <headline>Excavation d'&#233;gouts</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <roads>
       <road>
         <road_name>Guy</road_name>
@@ -106,7 +106,7 @@ DOC = """
       <end_date>2013-05-13</end_date>
     </schedule>
     <headline>Excavation d'&#233;gouts</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <detour>Rues avoisinantes</detour>
     <roads>
       <road>
@@ -131,7 +131,7 @@ DOC = """
       <end_date>2013-05-16</end_date>
     </schedule>
     <headline>Excavation d'&#233;gouts</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <event_type>INCIDENT</event_type>
     <geography>
       <gml:Point srsName="EPSG:4326">
@@ -148,7 +148,7 @@ DOC = """
       <end_date>2013-05-10</end_date>
     </schedule>
     <headline>Nouveau service pluvial</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <roads>
       <road>
         <road_name>Denis</road_name>
@@ -172,7 +172,7 @@ DOC = """
       <end_date>2013-05-31</end_date>
     </schedule>
     <headline>Travaux majeurs d'aqueduc</headline>
-    <severity>3</severity>
+    <severity>MAJOR</severity>
     <detour>Emprunter les boulevards Beauchesne ou Iberville pour acc&#233;der &#224; l'Autoroute.</detour>
     <roads>
       <road>
@@ -197,7 +197,7 @@ DOC = """
       <end_date>2013-05-24</end_date>
     </schedule>
     <headline>Train de l'Est (NUIT)</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <detour>Circulation en alternance avec signaleur</detour>
     <event_type>CONSTRUCTION</event_type>
     <geography>
@@ -223,7 +223,7 @@ DOC = """
       <end_date>2013-05-27</end_date>
     </schedule>
     <headline>Travaux majeurs de branchement de services</headline>
-    <severity>2</severity>
+    <severity>MODERATE</severity>
     <roads>
       <road>
         <road_name>Notre-Dame</road_name>
@@ -248,7 +248,7 @@ DOC = """
       <end_date>2013-05-25</end_date>
     </schedule>
     <headline>Travaux majeurs de branchement de services</headline>
-    <severity>3</severity>
+    <severity>MAJOR</severity>
     <roads>
       <road>
         <road_name>Rue Notre-Dame</road_name>
@@ -273,7 +273,7 @@ DOC = """
       <end_date>2013-05-30</end_date>
     </schedule>
     <headline>Gaz m&#233;tropolitain</headline>
-    <severity>2</severity>
+    <severity>MODERATE</severity>
     <roads>
       <road>
         <road_name>Lacombe</road_name>
@@ -297,7 +297,7 @@ DOC = """
       <end_date>2013-05-29</end_date>
     </schedule>
     <headline>Excavation &#233;gout</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <detour>Joliette, R&#233;gent et Renaud</detour>
     <roads>
       <road>
@@ -322,7 +322,7 @@ DOC = """
       <end_date>2013-05-28</end_date>
     </schedule>
     <headline>Excavation &#233;gouts</headline>
-    <severity>1</severity>
+    <severity>MINOR</severity>
     <detour>Notre-Dame, Iberville et Philippe-Goulet</detour>
     <roads>
       <road>
@@ -347,7 +347,7 @@ DOC = """
       <end_date>2013-05-18</end_date>
     </schedule>
     <headline>R&#233;fection de pavage</headline>
-    <severity>3</severity>
+    <severity>MAJOR</severity>
     <detour>Saint-Paul, Chemin de la Savane et mont&#233;e Lebeau</detour>
     <roads>
       <road>
@@ -372,7 +372,7 @@ DOC = """
       <end_date>2013-06-29</end_date>
     </schedule>
     <headline>Travaux majeurs d'Aqueduc</headline>
-    <severity>3</severity>
+    <severity>MAJOR</severity>
     <roads>
       <road>
         <road_name>Valmont</road_name>
@@ -396,7 +396,7 @@ DOC = """
       <end_date>2013-06-05</end_date>
     </schedule>
     <headline>Travaux de resurfacage</headline>
-    <severity>2</severity>
+    <severity>MODERATE</severity>
     <detour>Lafortune</detour>
     <roads>
       <road>
@@ -421,7 +421,7 @@ DOC = """
       <end_date>2013-06-10</end_date>
     </schedule>
     <headline>Train de l'Est</headline>
-    <severity>3</severity>
+    <severity>MAJOR</severity>
     <detour>Rue Saint-Paul - Chemin de la Presqu'&#206;le et r&#233;seau local dans Charlemagne jusqu'&#224; rue de Lyon</detour>
     <roads>
       <road>
@@ -446,7 +446,7 @@ DOC = """
       <end_date>2013-05-31</end_date>
     </schedule>
     <headline>Travaux de raccordement aux services d'&#233;gouts</headline>
-    <severity>2</severity>
+    <severity>MODERATE</severity>
     <roads>
       <road>
         <road_name>Marquis</road_name>
@@ -470,7 +470,7 @@ DOC = """
       <end_date>2013-06-21</end_date>
     </schedule>
     <headline>Travaux de pavage pour la construction du piste cyclable.</headline>
-    <severity>2</severity>
+    <severity>MODERATE</severity>
     <detour>Circulation en alternance avec la pr&#233;sence de signaleurs.</detour>
     <roads>
       <road>
