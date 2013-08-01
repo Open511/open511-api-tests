@@ -65,6 +65,10 @@ class BaseCase(TestCase):
     def setUpClass(cls):
         _api_endpoint_command('clear')
 
+    @classmethod
+    def tearDownClass(cls):
+        _api_endpoint_command('clear')        
+
     def get(self, url, params={}, headers={}):
         if USE_DJANGO_TEST_CLIENT:
             cgi_headers = dict(
