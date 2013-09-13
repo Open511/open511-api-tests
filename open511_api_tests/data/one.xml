@@ -12,7 +12,7 @@
     <detour>Partage des deux voies de circulation en direction Ouest</detour>
     <roads>
       <road>
-        <road_name>Iberville</road_name>
+        <name>Iberville</name>
         <from>Bonaventure</from>
         <to>Bord-de-l'eau</to>
       </road>
@@ -55,7 +55,7 @@
     <severity>MINOR</severity>
     <roads>
       <road>
-        <road_name>Guy</road_name>
+        <name>Guy</name>
         <from>Boulevard L&#233;vesque</from>
       </road>
     </roads>
@@ -79,7 +79,7 @@
     <detour>Rues avoisinantes</detour>
     <roads>
       <road>
-        <road_name>Vaudreuil</road_name>
+        <name>Vaudreuil</name>
         <from>Varin</from>
         <to>Saint Vallier</to>
       </road>
@@ -120,7 +120,7 @@
     <severity>MINOR</severity>
     <roads>
       <road>
-        <road_name>Denis</road_name>
+        <name>Denis</name>
         <from>Camille</from>
         <to>Maurice</to>
       </road>
@@ -145,7 +145,7 @@
     <detour>Emprunter les boulevards Beauchesne ou Iberville pour acc&#233;der &#224; l'Autoroute.</detour>
     <roads>
       <road>
-        <road_name>Valmont</road_name>
+        <name>Valmont</name>
         <from>Sartre</from>
         <to>Beauchesne</to>
       </road>
@@ -176,7 +176,7 @@
     </geography>
     <roads>
       <road>
-        <road_name>Boulevard Pierre-Le Gardeur</road_name>
+        <name>Boulevard Pierre-Le Gardeur</name>
         <from>Place Aubert</from>
       </road>
     </roads>
@@ -195,7 +195,7 @@
     <severity>MODERATE</severity>
     <roads>
       <road>
-        <road_name>Notre-Dame</road_name>
+        <name>Notre-Dame</name>
         <from>915 Notre-Dame</from>
       </road>
     </roads>
@@ -220,7 +220,7 @@
     <severity>MAJOR</severity>
     <roads>
       <road>
-        <road_name>Rue Notre-Dame</road_name>
+        <name>Rue Notre-Dame</name>
         <from>Beauchesne</from>
         <to>Valmont</to>
       </road>
@@ -245,7 +245,7 @@
     <severity>MODERATE</severity>
     <roads>
       <road>
-        <road_name>Lacombe</road_name>
+        <name>Lacombe</name>
         <from>Turenne</from>
         <to>Chatel</to>
       </road>
@@ -270,7 +270,7 @@
     <detour>Joliette, R&#233;gent et Renaud</detour>
     <roads>
       <road>
-        <road_name>Ritchot</road_name>
+        <name>Ritchot</name>
         <from>Joliette</from>
         <to>Montcalm</to>
       </road>
@@ -295,7 +295,7 @@
     <detour>Notre-Dame, Iberville et Philippe-Goulet</detour>
     <roads>
       <road>
-        <road_name>Laurentien</road_name>
+        <name>Laurentien</name>
         <from>Rachel</from>
         <to>Rainville</to>
       </road>
@@ -320,7 +320,7 @@
     <detour>Saint-Paul, Chemin de la Savane et mont&#233;e Lebeau</detour>
     <roads>
       <road>
-        <road_name>Chemin de la Presqu'Ile</road_name>
+        <name>Chemin de la Presqu'Ile</name>
         <from>Saint-Paul</from>
         <to>Mont&#233;e Lebeau</to>
       </road>
@@ -344,7 +344,7 @@
     <severity>MAJOR</severity>
     <roads>
       <road>
-        <road_name>Valmont</road_name>
+        <name>Valmont</name>
         <from>Sarte</from>
         <to>Beauchesne/Masson</to>
       </road>
@@ -369,7 +369,7 @@
     <detour>Lafortune</detour>
     <roads>
       <road>
-        <road_name>Boulevard Lacombe</road_name>
+        <name>Boulevard Lacombe</name>
         <from>Boulevard Le Bourg-Neuf</from>
         <to>Rue Lafortune</to>
       </road>
@@ -394,7 +394,7 @@
     <detour>Rue Saint-Paul - Chemin de la Presqu'&#206;le et r&#233;seau local dans Charlemagne jusqu'&#224; rue de Lyon</detour>
     <roads>
       <road>
-        <road_name>Boulevard Pierre - Le Gardeur</road_name>
+        <name>Boulevard Pierre - Le Gardeur</name>
         <from>Mont&#233;e des Arsenaux</from>
         <to>De Lyon</to>
       </road>
@@ -418,7 +418,7 @@
     <severity>MODERATE</severity>
     <roads>
       <road>
-        <road_name>Marquis</road_name>
+        <name>Marquis</name>
         <from>Plaisance</from>
         <to>Brien</to>
       </road>
@@ -443,7 +443,7 @@
     <detour>Circulation en alternance avec la pr&#233;sence de signaleurs.</detour>
     <roads>
       <road>
-        <road_name>Chemin de la Presqu'&#206;le</road_name>
+        <name>Chemin de la Presqu'&#206;le</name>
         <from>Rue Nathalie</from>
         <to>Limite de la Ville de Repentigny et Charlemagne</to>
       </road>
