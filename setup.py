@@ -9,7 +9,8 @@ setup(
         'open511_api_tests',
     ],
     install_requires = [
-        'lxml',
-        'requests>=1.2.0'
+        'lxml>=2.3',
+        'requests>=1.2.0',
+        'open511-validator>=0.1'
     ]
 )

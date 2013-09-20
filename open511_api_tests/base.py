@@ -1,9 +1,9 @@
-import os
 from unittest import TestCase
 from urlparse import urljoin
 
-from lxml import etree, isoschematron
-import requests
+from lxml import etree
+
+import open511_validator
 
 API_URL = None
 TEST_ENDPOINT_URL = None
@@ -15,10 +15,6 @@ DjangoTestClient = None
 NSMAP = {
     'gml': 'http://www.opengis.net/gml',
 }
-
-CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
-RELAXNG_SCHEMA = etree.RelaxNG(etree.parse(os.path.join(CURRENT_DIR, 'open511.rng')))
-SCHEMATRON_DOC = isoschematron.Schematron(etree.parse(os.path.join(CURRENT_DIR, 'open511.schematron')))
 
 def set_options(api_url, test_endpoint_url, use_django_test_client=False):
     global API_URL, TEST_ENDPOINT_URL, EVENTS_URL, USE_DJANGO_TEST_CLIENT, DjangoTestClient, _api_endpoint_command
@@ -92,7 +88,6 @@ class BaseCase(TestCase):
         assert resp.status_code == 200
         open511_el = etree.fromstring(resp.content)
         assert open511_el.tag == 'open511'
-        for schema in RELAXNG_SCHEMA, SCHEMATRON_DOC:
-            schema.assertValid(open511_el)
+        open511_validator.validate(open511_el)
 
         return open511_el
