@@ -20,13 +20,13 @@ class SimpleFiltersCase(BaseCase):
         default = self.get_events()
         # import pdb; pdb.set_trace()
         active = self.get_events(status='ACTIVE')
-        self.assertEquals(len(default.xpath('event')), 6)
-        assert len(active.xpath('event')) == 6
+        self.assertEquals(len(default.xpath('events/event')), 6)
+        assert len(active.xpath('events/event')) == 6
         archived = self.get_events(status='ARCHIVED')
         assert not archived.xpath('//status[text()="ACTIVE"]')
-        assert len(archived.xpath('event')) == 13
+        assert len(archived.xpath('events/event')) == 13
         all_ = self.get_events(status='ALL')
-        assert len(all_.xpath('event')) == 19
+        assert len(all_.xpath('events/event')) == 19
         assert len(all_.xpath('//status[text()="ACTIVE"]')) == 6
         assert len(all_.xpath('//status[text()="ARCHIVED"]')) == 13
      
