@@ -38,7 +38,7 @@ def _get_events_url(api_url):
         resp = requests.get(api_url, headers={'Accept': 'application/xml'})
     discovery = etree.fromstring(resp.content)
     assert discovery.tag == 'open511'
-    event_service = discovery.xpath('services/service[service_type/text()="EVENTS"]')[0]
+    event_service = discovery.xpath('services/service[link[@rel="service_type"][@href = "http://open511.org/services/events/"]]')[0]
     event_url = event_service.xpath('link[@rel="self"]', namespaces=NSMAP)[0].get('href')
     return urljoin(api_url, event_url)
 
