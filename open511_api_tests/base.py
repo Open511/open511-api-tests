@@ -1,4 +1,5 @@
 from unittest import TestCase
+from urllib import urlencode
 from urlparse import urljoin
 
 from lxml import etree
@@ -65,26 +66,33 @@ class BaseCase(TestCase):
     def tearDownClass(cls):
         _api_endpoint_command('clear')        
 
-    def get(self, url, params={}, headers={}):
+    def get(self, url, headers={}):
         if USE_DJANGO_TEST_CLIENT:
             cgi_headers = dict(
                 ('HTTP_' + key.upper().replace('-', '_'), value)
                 for key, value in headers.items()
             )
-            return DjangoTestClient().get(url, params, **cgi_headers)
+            return DjangoTestClient().get(url, **cgi_headers)
         else:
-            return requests.get(url, params=params, headers=headers)
+            return requests.get(url, headers=headers)
 
-    def get_events(self, **kwargs):
+    def get_events(self, url=None, **kwargs):
         params = {
             'jurisdiction': 'test.open511.org'
         }
+        if url is not None and 'jurisdiction=test.open511.org' in url:
+            params = {}
         headers = {
             'Accept': 'application/xml'
         }
         headers.update(kwargs.pop('headers', {}))
         params.update(kwargs)
-        resp = self.get(EVENTS_URL, params=params, headers=headers)
+        full_url = EVENTS_URL
+        if url:
+            full_url = urljoin(full_url, url)
+        full_url += '&' if '?' in full_url else '?'
+        full_url += urlencode(params)
+        resp = self.get(full_url, headers=headers)
         assert resp.status_code == 200
         open511_el = etree.fromstring(resp.content)
         assert open511_el.tag == 'open511'

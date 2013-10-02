@@ -30,4 +30,23 @@ class SimpleFiltersCase(BaseCase):
         assert len(all_.xpath('//status[text()="ACTIVE"]')) == 6
         assert len(all_.xpath('//status[text()="ARCHIVED"]')) == 13
      
+    def test_pagination(self):
+        first_page = self.get_events(limit=7, status='ALL')
+        self.assertEquals(len(first_page.xpath('events/event')), 7)
+        first_page_ids = set(first_page.xpath('events/event/id/text()'))
+
+        second_page = self.get_events(url=first_page.xpath('pagination/link[@rel="next"]/@href')[0], limit=7)
+        self.assertEquals(len(second_page.xpath('events/event')), 7)
+        second_page_ids = set(second_page.xpath('events/event/id/text()'))
+
+        third_page = self.get_events(url=second_page.xpath('pagination/link[@rel="next"]/@href')[0], limit=7)
+        self.assertEquals(len(third_page.xpath('events/event')), 5)
+        third_page_ids = set(third_page.xpath('events/event/id/text()'))
+        self.assertEquals(len(third_page.xpath('pagination/link[@rel="next"]')), 0)
+
+        print first_page_ids
+        print second_page_ids
+        print third_page_ids
+
+        self.assertEquals(len(first_page_ids.intersection(second_page_ids).intersection(third_page_ids)), 0)
 
