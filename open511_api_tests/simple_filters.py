@@ -44,9 +44,5 @@ class SimpleFiltersCase(BaseCase):
         third_page_ids = set(third_page.xpath('events/event/id/text()'))
         self.assertEquals(len(third_page.xpath('pagination/link[@rel="next"]')), 0)
 
-        print first_page_ids
-        print second_page_ids
-        print third_page_ids
-
         self.assertEquals(len(first_page_ids.intersection(second_page_ids).intersection(third_page_ids)), 0)
 
