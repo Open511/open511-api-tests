@@ -11,6 +11,6 @@ setup(
     install_requires = [
         'lxml>=2.3',
         'requests>=1.2.0',
-        'open511-validator>=0.1'
+        'open511>=0.2'
     ]
 )
