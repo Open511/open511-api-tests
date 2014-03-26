@@ -4,7 +4,7 @@ from urlparse import urljoin
 
 from lxml import etree
 
-import open511_validator
+from open511.validator import validate
 
 API_URL = None
 TEST_ENDPOINT_URL = None
@@ -25,7 +25,7 @@ def set_options(api_url, test_endpoint_url, use_django_test_client=False):
     if use_django_test_client:
         from django.test.client import Client as DjangoTestClient
         try:
-            from open511.views.test_endpoint import execute_test_endpoint_command as _api_endpoint_command
+            from open511_server.views.test_endpoint import execute_test_endpoint_command as _api_endpoint_command
         except ImportError:
             if test_endpoint_url is None:
                 raise
@@ -96,6 +96,6 @@ class BaseCase(TestCase):
         assert resp.status_code == 200
         open511_el = etree.fromstring(resp.content)
         assert open511_el.tag == 'open511'
-        open511_validator.validate(open511_el)
+        validate(open511_el)
 
         return open511_el
