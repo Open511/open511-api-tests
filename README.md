@@ -1,6 +1,6 @@
 Integration tests for an Open511 API.
 
-These tests are written for Open North's [Open511 server](https://github.com/opennorth/open511), but are loosely coupled so that they could be used with minimal effort to test another Open511 implementation.
+These tests are written for Open North's [Open511 server](https://github.com/open511/open511), but are loosely coupled so that they could be used with minimal effort to test another Open511 implementation.
 
 # Setup
 
