@@ -1,6 +1,9 @@
 from unittest import TestCase
-from urllib import urlencode
-from urlparse import urljoin
+try:
+    from urllib import urlencode
+    from urlparse import urljoin
+except ImportError:
+    from urllib.parse import urljoin, urlencode
 
 from lxml import etree
 
